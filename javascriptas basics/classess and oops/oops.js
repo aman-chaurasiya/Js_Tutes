@@ -30,5 +30,8 @@ function User(username, loginCount, isLoggedIn) {
 // const userTwo = User("ChaiAurCode", 11, false);
 const userOne = new User("hitesh", 12, true);
 const userTwo = new User("ChaiAurCode", 11, false);
-console.log(userOne);
-console.log(userTwo);
+// console.log(userOne);
+// console.log(userTwo);
+// console.log(userOne.greeting());
+// console.log(userTwo.greeting());
+console.log(userOne.constructor);
