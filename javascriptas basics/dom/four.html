@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: white">
+    <ul class="language">
+      <li>Javascripts</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      //   console.log(li);
+      li.innerHTML = `${langName}`;
+      //   console.log(li);
+      const parent = document.querySelector(".language").appendChild(li);
+      //   console.log(parent);
+    }
+
+    addLanguage("python");
+    addLanguage("Java");
+    addLanguage("Dot Net");
+    function addOptiLanguage(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptiLanguage("PHP");
+
+    // editing element
+    const secondElement = document.querySelector("li:nth-child(2)");
+    // console.log(secondElement);
+    secondElement.innerHTML = "MOJO";
+
+    const newLi = document.createElement("li");
+    newLi.appendChild(document.createTextNode("RUBY"));
+    console.log(newLi.innerHTML);
+    secondElement.replaceWith(newLi);
+
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>Pranjal</li>";
+
+    //removal
+
+    const lastLang = document.querySelector("li:last-child");
+    console.log(lastLang.innerHTML);
+
+    lastLang.remove();
+  </script>
+</html>

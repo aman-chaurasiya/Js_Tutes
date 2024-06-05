@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chai aur code</title>
+  </head>
+  <body>
+    <h1 id="textName">chai aur code</h1>
+    <button id="stop">STOP</button>
+  </body>
+  <script>
+    function nameChange() {
+      document.getElementById("textName").innerHTML = "Aman chaurasiya Sunny";
+    }
+    const stopTimeOut = setTimeout(nameChange, 3000);
+
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearTimeout(stopTimeOut);
+      document.querySelector("#stop").innerHTML = "stoped";
+      console.log("setTimeout Stoped");
+    });
+  </script>
+</html>

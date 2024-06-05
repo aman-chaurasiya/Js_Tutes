@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="imgtag" src="./pic1.jpg" alt="" />
+  </body>
+  <script>
+    let img = document.getElementById("imgtag");
+
+    let flag = true;
+    img.addEventListener("click", function () {
+      //   console.log("event us");
+
+      if (flag == true) {
+        img.src = "./pic2.jpg";
+      } else {
+        img.src = "./pic1.jpg";
+      }
+      flag = !flag;
+      //   console.log(flag);
+    });
+  </script>
+</html>

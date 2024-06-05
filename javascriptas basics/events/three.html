@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chai aur code</title>
+  </head>
+  <body>
+    <h1 class="text">Chai aur code</h1>
+
+    <button class="button1">start</button>
+    <button class="button2">stop</button>
+  </body>
+  <script>
+    const setIntervalTimer = setInterval(() => {
+      console.log("Aman sunny");
+    }, 3000);
+    document.querySelector(".button2").addEventListener("click", () => {
+      clearInterval(setIntervalTimer);
+      document.querySelector(".text").innerHTML = "stoped";
+    });
+
+    document.querySelector(".buttton1").addEventListener("click", () => {
+      setIntervalTimer();
+    });
+  </script>
+</html>
