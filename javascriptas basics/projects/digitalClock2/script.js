@@ -1,5 +1,6 @@
 let clock = () => {
   let date = new Date();
+
   let hrs = date.getHours();
   let mins = date.getMinutes();
   let secs = date.getSeconds();
@@ -24,7 +25,7 @@ let clock = () => {
   //   secs = secs < 10 ? "0" + secs : secs;
 
   //   let time = `${hrs}:${mins}:${secs}:${period}`;
-  let time = `${date.toLocaleTimeString()}`;
+  let time = date.toLocaleTimeString();
   console.log(time);
   document.getElementById("clock").innerText = time;
   setTimeout(clock, 1000);

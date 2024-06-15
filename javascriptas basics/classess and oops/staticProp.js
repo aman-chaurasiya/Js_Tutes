@@ -13,7 +13,9 @@ class User {
 }
 
 const hitesh = new User("hitesh");
-// console.log(hitesh.createId())
+// console.log(hitesh.createId());//error-: because createId is a static function
+console.log(hitesh.logMe());
+console.log(hitesh);
 
 class Teacher extends User {
   constructor(username, email) {
@@ -23,4 +25,7 @@ class Teacher extends User {
 }
 
 const iphone = new Teacher("iphone", "i@phone.com");
-console.log(iphone.createId());
+
+console.log(iphone.logMe());
+console.log(iphone.email);
+// console.log(iphone.createId()); // error:- because static function

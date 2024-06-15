@@ -1,8 +1,8 @@
-console.log(1);
-setTimeout(() => {
-  console.log(2);
-}, 0);
-console.log(3);
+// console.log(1);
+// setTimeout(() => {
+//   console.log(2);
+// }, 0);
+// console.log(3);
 // let counter = 1;
 
 setInterval(function () {
@@ -11,3 +11,12 @@ setInterval(function () {
   // clock.innerHTML = date.toLocaleTimeString();
   console.log(date.toLocaleTimeString());
 }, 1000);
+
+let clock = () => {
+  let date = new Date();
+  console.log(date.toLocaleTimeString());
+  setTimeout(clock, 1000);
+};
+
+clock();
+``;
